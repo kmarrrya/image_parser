@@ -13,14 +13,6 @@ def save_img(img_data,img_type,img_number):
     with open(f'images/{img_type}/{str(img_number).zfill(4)}.jpg','wb') as file:
                 file.write(img_data)
 
-def resave_img(img_data,img_type,img_number):
-    for img_data in img_datas:
-        os.makedirs('dataset1/{img_data}')
-        os.makedirs('dataset1/{img_data}')
-    for i in range(1,1020):
-        img=cv2.imread(f'dataset/{name}/{str(i).zfill(4)}.jpg')
-        cv2.imwrite(f'dataset1/{name}/{str(i).zfill(4)}.jpg', img)
-
 def create_file(img_type):
     if not os.path.exists(f'images/{img_type}'):
         os.makedirs(f'images/{img_type}')
